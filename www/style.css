@@ -1,34 +1,39 @@
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-table,
-caption {
+.form__pole {
   border: 1px solid black;
-  font-weight: ;
+  width: 200px;
+  padding-right: 80px;
+  padding-top: 10px;
+  border-radius: 5px;
 }
-table {
-  border: 1px solid black;
-}
-td,
-th {
-  border: 1px solid black;
-}
-caption {
-  border-bottom: none;
-}
-
-.head__table {
-  font-weight: 600;
-}
-
-.empty {
+.input {
   border: none;
 }
-.border__left {
-  border-left: none;
+.header {
+  font-weight: 700;
 }
-.last,
-.last__1 {
-  color: red;
+.name {
+  margin-top: -25px;
+}
+.age {
+}
+.phone {
+}
+.email {
+}
+
+.fieldset {
+  border: none;
+  margin-top: -25px;
+}
+.label {
+  margin-top: 10px;
+}
+.placeholder {
+  resize: vertical;
+}
+.button_type {
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  cursor: pointer;
 }

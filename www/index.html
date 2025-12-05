@@ -7,69 +7,63 @@
     <title>Таблицы</title>
   </head>
   <body>
-    <table>
-      <caption class="head__table">
-        Июнь 2025
-      </caption>
-      <tbody>
-        <tr>
-          <th>ПН</th>
-          <th>ВТ</th>
-          <th>СР</th>
-          <th>ЧТ</th>
-          <th>ПТ</th>
-          <th class="last">СБ</th>
-          <th class="last__1">ВС</th>
-        </tr>
-        <tr>
-          <td class="empty"></td>
-          <td class="empty"></td>
-          <td class="empty"></td>
-          <td class="empty"></td>
-          <td class="empty"></td>
-          <td class="border__left"></td>
-          <td class="last__1">01</td>
-        </tr>
-        <tr>
-          <td>02</td>
-          <td>03</td>
-          <td>04</td>
-          <td>05</td>
-          <td>06</td>
-          <td class="last">07</td>
-          <td class="last__1">08</td>
-        </tr>
-        <tr>
-          <td>09</td>
-          <td>10</td>
-          <td>11</td>
-          <td>12</td>
-          <td>13</td>
-          <td class="last">14</td>
-          <td class="last__1">15</td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>17</td>
-          <td>18</td>
-          <td>19</td>
-          <td>20</td>
-          <td class="last">21</td>
-          <td class="last__1">22</td>
-        </tr>
-        <tr>
-          <td>23</td>
-          <td>24</td>
-          <td>25</td>
-          <td>26</td>
-          <td>27</td>
-          <td class="last">28</td>
-          <td class="last__1">29</td>
-        </tr>
-        <tr>
-          <td>30</td>
-        </tr>
-      </tbody>
-    </table>
+    <form class="form__pole">
+      <fieldset class="input">
+        <legend class="header">Ваши личные данные</legend>
+        <label>
+          ваше Имя
+          <input
+            type="name"
+            placeholder="Имя"
+            name="name"
+            required
+            class="name"
+          /><br /><br />
+        </label>
+        <label class="age">
+          Ваш возраст
+          <input
+            type="number"
+            placeholder="Возраст"
+            name="age"
+            required
+          /><br /><br />
+        </label>
+        <label>
+          Ваш номер телефона
+          <input
+            type="tel"
+            placeholder="Номер телефона"
+            name="phone"
+            class="phone"
+          /><br /><br />
+        </label>
+        <label>
+          <span class="pochta">Ваша почта</span>
+          <input
+            type="email"
+            placeholder="Почта"
+            name="email"
+            class="email"
+          /><br /><br />
+        </label>
+      </fieldset>
+      <fieldset class="fieldset">
+        Сообщение
+        <label>
+          <textarea placeholder="Ваше Сообщение" class="placeholder"></textarea>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="checkbox"
+            value="checkbox"
+            class="label"
+          />
+          Я принимаю правила </label
+        ><br />
+        <button type="submit" class="button_type">Отправить</button>
+      </fieldset>
+    </form>
   </body>
 </html>
