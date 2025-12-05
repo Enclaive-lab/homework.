@@ -1,0 +1,39 @@
+.form__pole {
+  border: 1px solid black;
+  width: 200px;
+  padding-right: 80px;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+.input {
+  border: none;
+}
+.header {
+  font-weight: 700;
+}
+.name {
+  margin-top: -25px;
+}
+.age {
+}
+.phone {
+}
+.email {
+}
+
+.fieldset {
+  border: none;
+  margin-top: -25px;
+}
+.label {
+  margin-top: 10px;
+}
+.placeholder {
+  resize: vertical;
+}
+.button_type {
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
