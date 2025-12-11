@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
     <title>Таблицы</title>
   </head>
   <body>
@@ -17,25 +18,26 @@
             placeholder="Имя"
             name="name"
             required
-            class="name"
+            class="name outline__css"
           /><br /><br />
         </label>
         <label class="age">
           Ваш возраст
           <input
+            class="age outline__css"
             type="number"
             placeholder="Возраст"
-            name="age"
+            name="age "
             required
           /><br /><br />
         </label>
         <label>
           Ваш номер телефона
           <input
-            type="tel"
+            type="tel "
             placeholder="Номер телефона"
             name="phone"
-            class="phone"
+            class="phone outline__css"
           /><br /><br />
         </label>
         <label>
@@ -44,24 +46,28 @@
             type="email"
             placeholder="Почта"
             name="email"
-            class="email"
-          /><br /><br />
+            class="email outline__css"
+          />
         </label>
       </fieldset>
       <fieldset class="fieldset">
         Сообщение
         <label>
-          <textarea placeholder="Ваше Сообщение" class="placeholder"></textarea>
+          <textarea
+            placeholder="Ваше Сообщение"
+            class="placeholder outline__css"
+          ></textarea>
         </label>
-        <label>
+        <label class="label label-checkbox"
+          ><br />
           <input
             type="checkbox"
             name="checkbox"
             value="checkbox"
-            class="label"
+            class="label checkbox"
           />
-          Я принимаю правила </label
-        ><br />
+          <span class="checked__text">Я принимаю правила</span>
+        </label>
         <button type="submit" class="button_type">Отправить</button>
       </fieldset>
     </form>

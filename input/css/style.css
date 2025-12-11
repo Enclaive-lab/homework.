@@ -1,0 +1,105 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.form__pole {
+  margin-top: 20px;
+  margin-left: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.input {
+  border: none;
+  margin-top: 0;
+}
+.header {
+  font-weight: 700;
+  padding-top: 10px;
+}
+.name,
+.age,
+.phone,
+.email {
+  margin-top: 10px;
+  width: 100%; /* или конкретная ширина, но без сдвигов */
+  box-sizing: border-box;
+}
+
+.fieldset {
+  border: none;
+  margin-top: px;
+}
+.label {
+  margin-top: 10px;
+}
+.placeholder {
+  resize: vertical;
+  width: 100%;
+}
+
+.label-checkbox {
+  padding-left: 22px;
+}
+.checkbox {
+  cursor: pointer;
+  accent-color: yellowgreen;
+  appearance: none;
+  position: absolute;
+  outline: none;
+  padding-left: 16px;
+}
+
+.checkbox:checked::after{
+  background: url(../images/check-icon.svg) no-repeat center,  #9acd32;
+
+}
+.checkbox::after {
+  content: "";
+  position: absolute;
+  margin-top: -16px;
+  margin-left: -20px;
+  bottom: -6px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button_type {
+  background-color: blueviolet;
+  padding: 5px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  cursor: default;
+  transition: opasity 0.2s;
+}
+
+.button_type:hover {
+  opacity: 0.85;
+}
+
+.button_type:active {
+  background-color: #9acd32;
+}
+
+.outline__css:focus-visible,
+.placeholder:focus-visible,
+.checkbox:focus-visible::after,
+.button_type:focus-visible {
+  outline: 2px solid blue;
+  outline-offset: 1px;
+}
