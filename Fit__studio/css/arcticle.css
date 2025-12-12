@@ -1,5 +1,5 @@
 html {
-  font-family: Ubuntu;
+  font-family: "Ubuntu", sans-serif;
 }
 
 * {
@@ -48,6 +48,11 @@ p {
   color: #535755;
   font-family: Ubuntu, sans-serif;
 }
+
+.article__text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .article__mb {
   margin-bottom: 80px;
 }
