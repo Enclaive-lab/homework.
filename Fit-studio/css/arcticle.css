@@ -18,22 +18,12 @@ p {
   margin: 0 auto;
   padding: 0 15px;
 }
-.article__title {
-  max-width: 596px;
-  font-family: Oswald;
-  font-weight: 600;
-  line-height: 115%;
-  text-transform: uppercase;
-  color: #2c332f;
-  margin-bottom: 40px;
-}
+
 .article {
   padding-top: 80px;
   padding-bottom: 120px;
 }
-.article__title__large {
-  font-size: 48px;
-}
+
 
 .article__title__medium {
   font-size: 36px;
