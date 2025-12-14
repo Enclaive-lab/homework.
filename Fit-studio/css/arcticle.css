@@ -111,4 +111,13 @@ p {
   border: none;
   cursor: pointer;
   transform: translate(-50%, -50%);
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.article-play-button:hover{
+   
+   background-color: #082238;
+}
+.article-play-button:not(:disabled):active{
+  background-color: #2d82cd;
 }

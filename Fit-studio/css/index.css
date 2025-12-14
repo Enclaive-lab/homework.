@@ -129,3 +129,59 @@
   height: 9px;
   background-image: url(../images/arrow-right-icon.svg);
 }
+
+.faq {
+  position: relative;
+}
+
+.faq::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: calc(50% - 250px);
+  height: 48px;
+  background: url("../images/декор\ 3.svg") repeat-x;
+  top: 215px;
+
+}
+
+.faq__container {
+  display: flex;
+  gap: 28px;
+}
+
+details {
+  margin-bottom: 20px;
+  border-block: 1px solid #d3cbd9;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+summary::after {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 22px;
+  background: url(../images/стрелка2.svg) no-repeat center / cover;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details > p {
+  padding: 0 20px;
+}
