@@ -6,6 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 375px;
 }
 
 *,
@@ -22,10 +23,17 @@ h5,
 p {
   margin: 0;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 a,
 button {
   outline: none;
 }
+
 .container {
   max-width: 1250px;
   margin: 0 auto;
@@ -93,6 +101,10 @@ button {
   color: #858e8a;
 }
 
+.decor::before {
+  top: 215px;
+}
+
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
@@ -103,4 +115,48 @@ summary:focus-visible {
 .button:not(:disabled):active {
   opacity: 0.65;
   cursor: default;
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px;
+  }
+  .title-large {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .home-page .title-large {
+    text-align: center;
+    max-width: inherit;
+    margin-bottom: 30px;
+  }
+  .title-medium {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    margin-bottom: 80px;
+  }
+  .title-large {
+    font-size: 34px;
+  }
+
+  .title-medium {
+    font-size: 18px;
+  }
+
+  .home-page .title-large {
+    text-align: center;
+    max-width: inherit;
+    margin-bottom: 30px;
+  }
 }
