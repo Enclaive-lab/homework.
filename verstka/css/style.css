@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 375px;
+  margin: 0;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container {
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+}
+.header {
+  background-color: red;
+  grid-column-start: 12 span;
+  height: 110px;
+}
+.aside {
+  background-color: yellow;
+  grid-row-start: 10 span;
+  width: 300px;
+}
+.main {
+  background-color: green;
+  grid-column-end: 11 span;
+  grid-row-start: 10 span;
+}
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "one two  three four"
+    "five six seven eight";
+  gap: 5px;
+}
+.card__item {
+  margin-top: 15px;
+  background-color: orange;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  height: 500px;
+  width: 300px;
+}
+.footer {
+  background-color: blue;
+  height: 150px;
+  grid-column-start: 12 span;
+}
+.card__item:nth-child(1) {
+  grid-area: one;
+}
+.card__item:nth-child(2) {
+  grid-area: two;
+}
+.card__item:nth-child(3) {
+  grid-area: three;
+}
+.card__item:nth-child(4) {
+  grid-area: four;
+}
+.card__item:nth-child(5) {
+  grid-area: five;
+}
+.card__item:nth-child(6) {
+  grid-area: six;
+}
+.card__item:nth-child(7) {
+  grid-area: seven;
+}
+.card__item:nth-child(8) {
+  grid-area: eight;
+}
