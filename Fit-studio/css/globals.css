@@ -40,14 +40,14 @@ button {
   padding: 0 15px;
 }
 
-.text {
+.news__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
   color: #535755;
 }
 
-.button {
+.hero__button {
   padding: 19px 32px;
   background-color: #3596ed;
   font-weight: 500;
@@ -61,11 +61,11 @@ button {
   transition: opacity 0.4s background-color 0.2s;
 }
 
-.button:hover {
+.hero__button:hover {
   opacity: 0.8;
 }
 
-.button:active {
+.hero__button:active {
   background-color: #2d82cd;
 }
 
@@ -73,7 +73,7 @@ button {
   margin-bottom: 140px;
 }
 
-.title-large {
+.news__title {
   max-width: 596px;
   font-family: "Oswald", sans-serif;
   font-weight: 600;
@@ -84,7 +84,7 @@ button {
   margin-bottom: 40px;
 }
 
-.title-medium {
+.faq__title-medium {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 24px;
@@ -93,7 +93,7 @@ button {
   color: #2c332f;
 }
 
-.text-sub {
+.news__datetime {
   font-weight: 300;
   font-size: 14px;
   letter-spacing: 0.04em;
@@ -102,7 +102,6 @@ button {
 }
 
 .decor::before {
-  top: 215px;
 }
 
 a:focus-visible,
@@ -112,7 +111,7 @@ summary:focus-visible {
   outline-offset: 1px;
 }
 
-.button:not(:disabled):active {
+.hero__button:not(:disabled):active {
   opacity: 0.65;
   cursor: default;
 }
@@ -127,17 +126,17 @@ summary:focus-visible {
   .container {
     max-width: 576px;
   }
-  .title-large {
+  .news__title {
     font-size: 40px;
     margin-bottom: 30px;
   }
 
-  .home-page .title-large {
+  .home-page .news__title {
     text-align: center;
     max-width: inherit;
     margin-bottom: 30px;
   }
-  .title-medium {
+  .faq__title-medium {
     font-size: 22px;
   }
 }
@@ -146,15 +145,15 @@ summary:focus-visible {
   .section {
     margin-bottom: 80px;
   }
-  .title-large {
+  .news__title {
     font-size: 34px;
   }
 
-  .title-medium {
+  .faq__title-medium {
     font-size: 18px;
   }
 
-  .home-page .title-large {
+  .home-page .news__title {
     text-align: center;
     max-width: inherit;
     margin-bottom: 30px;

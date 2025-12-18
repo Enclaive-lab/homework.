@@ -8,7 +8,7 @@
   bottom: 106px;
 }
 
-.hero-container {
+.hero__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,7 +43,7 @@
   display: flex;
 }
 
-.button {
+.hero__button {
   padding: 19px 32px;
   background-color: #3596ed;
   font-weight: 500;
@@ -54,13 +54,15 @@
   text-align: center;
   color: #fff;
   text-decoration: none;
+  position: relative;
+  top: 150px;
 }
 
-.hero-info {
+.section__info {
   max-width: 492px;
 }
 
-.hero-info .text {
+.section__info .text {
   margin-bottom: 140px;
   max-width: 440px;
 }
@@ -71,7 +73,7 @@
   position: relative;
 }
 
-.hero-choose {
+.hero-images__choose {
   position: absolute;
   border: 1px solid #535755;
   top: 40px;
@@ -89,19 +91,19 @@
   content: "";
   position: absolute;
   z-index: -1;
-  width: calc(50% - 250px);
+  width: 100%;
   top: 550px;
   height: 48px;
   background: url("../images/декор\ 3.svg") repeat-x;
 }
 
-.news-card {
+.news__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 28px;
 }
-.news-article {
+.news__article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,24 +120,24 @@
   flex: 1 1 25%;
 }
 
-.news-article img {
+.news__article img {
   display: block;
 }
-.news-info {
+.news__info {
   padding: 20px 20px 0;
   margin-bottom: 12px;
 }
-.news-date {
+.news__datetime {
   margin-bottom: 8px;
   display: inline-block;
 }
 
-.news-article footer {
+.news__article footer {
   padding: 0 20px 20px;
   margin-top: auto;
 }
 
-.news-link {
+.news__link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -149,7 +151,7 @@
   color: #3596ed;
   text-decoration: none;
 }
-.news-link:hover::after {
+.news__link:hover::after {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -160,7 +162,7 @@
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-.news-link::after {
+.news__link::after {
   content: "";
   display: inline-block;
   width: 22px;
@@ -190,23 +192,23 @@
   gap: 28px;
 }
 
-details {
+.faq__details {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-block: 1px solid #d3cbd9;
 }
 
-details:last-child {
+.faq__details:last-child {
   margin-bottom: 0;
 }
 
-details[open] summary::after {
+.faq__details[open] summary::after {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-summary {
+.faq__title-medium {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,7 +228,7 @@ summary {
   user-select: none;
 }
 
-summary::after {
+.faq__title-medium::after {
   content: "";
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -236,11 +238,11 @@ summary::after {
   background: url(../images/стрелка2.svg) no-repeat center / cover;
 }
 
-summary::-webkit-details-marker {
+.faq__title-medium::-webkit-details-marker {
   display: none;
 }
 
-details > p {
+.faq__details > p {
   padding: 0 20px;
 }
 
@@ -250,7 +252,7 @@ details > p {
     max-width: 768px;
   }
 
-  .hero-container {
+  .hero__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -264,7 +266,7 @@ details > p {
     display: none;
   }
 
-  .hero-info {
+  .section__info {
     text-align: center;
   }
 
@@ -278,7 +280,7 @@ details > p {
     margin-bottom: 30px;
   }
 
-  .news-card {
+  .news__card {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: center;
@@ -286,12 +288,12 @@ details > p {
     justify-content: center;
     gap: 20px;
   }
-  .news-article {
+  .news__article {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 350px;
   }
-  .news-article img {
+  .news__article img {
     width: 100%;
   }
 
@@ -321,7 +323,7 @@ details > p {
     display: none;
   }
 
-  .hero-container {
+  .hero__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -331,7 +333,7 @@ details > p {
     align-items: center;
   }
 
-  .hero-info {
+  .hero__info {
     text-align: center;
   }
 
@@ -340,7 +342,7 @@ details > p {
     font-size: 52px;
   }
 
-  .hero-info .text {
+  .hero__info .text {
     max-width: inherit;
     margin-bottom: 30px;
   }
@@ -351,7 +353,7 @@ details > p {
     font-size: 50px;
   }
 
-  .news-article {
+  .news__article {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 400px;
@@ -363,7 +365,7 @@ details > p {
     padding-top: 60px;
   }
 
-  .hero-info {
+  .hero__info {
     max-width: 410px;
   }
 
@@ -371,7 +373,7 @@ details > p {
     font-size: 42px;
   }
 
-  .hero-choose {
+  .hero__choose {
     max-width: 125px;
     padding: 10px;
     font-size: 14px;
