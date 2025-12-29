@@ -147,5 +147,6 @@
 }
 
 .hero__details-icon {
+  fill:none ;
   stroke: currentColor;
 }
