@@ -1,0 +1,220 @@
+.roadmap {
+  margin-top: 0;
+  background: #022335;
+  background: linear-gradient(
+    135deg,
+    #011a26 0%,
+    #022e3a 100%,
+    #0a3d42 50%,
+    #0c4a47 10%
+  );
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.roadmap__accardeon-item {
+  list-style: none;
+}
+
+.roadmap__accardeon-item[open] .roadmap__accordion-content {
+  max-height: 1920px;
+  padding-top: 37px;
+  transform: var(--transition);
+}
+
+.roadmap__accardeon-item[open] .roadmap__accordion-arrow svg {
+  transform: rotate(180deg);
+}
+
+.roadmap__accardeon-item[open] .roadmap__accordion-arrow::after {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 224, 255, 0.11) 0%,
+    rgba(0, 224, 255, 0.11) 100%
+  );
+}
+
+.roadmap__title {
+  color: var(--color-text-primary);
+  padding-left: 60px;
+  padding-top: 103px;
+}
+
+.roadmap__title-accent {
+  color: var(--color-title);
+}
+
+.roadmap__title-info {
+  padding-top: 35px;
+  padding-left: 60px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-text-primary);
+}
+
+.roadmap__accordion-header-title {
+  font-weight: 750;
+  font-size: 20px;
+  line-height: 105%;
+  color: #fff;
+  padding-left: 20px;
+  position: relative;
+}
+
+.roadmap__accordion-header {
+  display: flex;
+  margin-top: 27px;
+  padding: 15px 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-left: 60px;
+  align-items: center;
+  list-style: none;
+  background: rgba(3, 225, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.roadmap__accordion-header-title::before {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  background: #03e1ff;
+  box-shadow: 0 4px 8px 0 rgba(0, 224, 255, 0.56);
+  width: 10px;
+  height: 10px;
+  bottom: 22px;
+  left: 0px;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.roadmap__accordion-duration {
+  font-weight: 500;
+  font-size: 15px;
+  color: #08b1b9;
+}
+
+.roadmap__development {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 162%;
+  text-transform: uppercase;
+  color: #08262b;
+  background: var(--color-text-accent);
+  padding: 2px 4px 2px 3px;
+}
+
+.roadmap__accordion-arrow {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+}
+
+.roadmap__accordion-arrow::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  border-radius: 6px;
+  padding: 2px;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #49b9e8 0deg,
+    rgba(31, 77, 96, 0.43) 90deg,
+    #49b9e8 180deg,
+    rgba(31, 77, 96, 0.43) 270deg,
+    #49b9e8 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.roadmap__accordion-arrow::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 224, 255, 0.5) 0%,
+    rgba(0, 224, 255, 0.15) 100%
+  );
+  border-radius: 8px;
+  left: -9px;
+  width: 32px;
+  height: 32px;
+}
+
+.roadmap__section-title {
+  font-weight: 750;
+  font-size: 16px;
+  line-height: 131%;
+  color: var(--color-title);
+  padding-bottom: 14px;
+}
+
+.roadmap__section {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.roadmap__section-icon {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-title);
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  transform: translateY(-4px);
+}
+
+.roadmap__accordion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-height: 0;
+  margin-left: 60px;
+  max-width: 1200px;
+}
+
+.roadmap-button {
+  margin-top: 59px;
+  margin-left: 59px;
+  background: var(--background-button);
+  border: none;
+  border-radius: 9px;
+  color: var(--color-fill);
+  font-weight: var(--font-weight-bold);
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-primary);
+  max-width: 479px;
+  height: 60px;
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+.roadmap__border-bottom {
+  width: 100%;
+  height: 0;
+  filter: blur(2px);
+  box-shadow: var(--border-bottom);
+  border: 1px solid #3dc8c0;
+  opacity: 0.9;
+  margin-top: 109px;
+  margin-left: 0;
+}
