@@ -1,0 +1,121 @@
+.main {
+  min-height: 100vh;
+}
+
+.advantages {
+  margin-top: 0;
+  background: #022335;
+  background: linear-gradient(
+    135deg,
+    #011a26 0%,
+    #022e3a 100%,
+    #0a3d42 50%,
+    #0c4a47 10%
+  );
+}
+
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  row-gap: 2px;
+}
+
+.advantages__title-accent {
+  color: var(--color-title);
+}
+
+.advantages__title {
+  padding-top: 124px;
+  color: #fff;
+  margin-left: 360px;
+  max-width: 550px;
+}
+
+.advantages__info-card {
+  background: linear-gradient(
+    135deg,
+    rgba(73, 185, 232, 0.18) 0%,
+    rgba(28, 98, 122, 0.12) 50%,
+    rgba(42, 102, 128, 0.08) 100%
+  );
+  padding: 36px 41px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  margin-top: 58px;
+  min-height: 212px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.advantages__info-card:nth-child(-n + 4) {
+  grid-column: span 3;
+  min-height: 220px;
+}
+
+.advantages__info-card:nth-child(n + 5) {
+  grid-column: span 4;
+  min-height: 220px;
+  margin-top: 17px;
+}
+.advantages__info-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2.5px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 35deg,
+    #2a66802e 0deg,
+    #2a66802e 80deg,
+    #49b9e861 115deg,
+    #49b9e873 125deg,
+    #49b9e861 130deg,
+    #28627a33 200deg,
+    #28627a33 260deg,
+    #49b9e861 295deg,
+    #49b9e873 305deg,
+    #49b9e861 310deg,
+    #1f4d602e 360deg
+  );
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+.advantages__info-card::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  border-radius: 100%;
+  background: rgba(3, 225, 255, 0.66);
+  filter: blur(11px);
+  height: 20px;
+  width: 62px;
+  pointer-events: none;
+}
+
+.advantages__info-title {
+  color: var(--color-fill);
+}
+
+.advantages__border-bottom {
+  width: 100%;
+  height: 0;
+  filter: blur(2px);
+  box-shadow: var(--border-bottom);
+  border: 1px solid #3dc8c0;
+  opacity: 0.9;
+  margin-top: 121px;
+  margin-bottom: 0px;
+}
