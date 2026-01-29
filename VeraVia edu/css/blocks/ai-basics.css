@@ -1,0 +1,120 @@
+.main {
+  min-height: 100vh;
+}
+
+.ai-basics {
+  margin-top: 0;
+  background: #022335;
+  background: linear-gradient(
+    135deg,
+    #011a26 0%,
+    #022e3a 100%,
+    #0a3d42 50%,
+    #0c4a47 10%
+  );
+  position: relative;
+}
+
+.ai-basics__title {
+  color: var(--color-text-primary);
+  padding-top: 105px;
+  margin-left: 360px;
+  padding-bottom: 111px;
+}
+
+.ai-basics__text {
+  text-align: left;
+}
+
+.ai-basics__content-text {
+  flex: 1;
+  max-width: 263px;
+  padding-right: 5px;
+  min-width: 0;
+}
+
+.ai-basics__image-container {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.ai-basics__image-container::after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  background: rgba(3, 225, 255, 0.6);
+  filter: blur(11px);
+  height: 15px;
+  bottom: -9px;
+  right: 66%;
+  width: 63px;
+  pointer-events: none;
+}
+
+.ai-basics__title-accent {
+  color: var(--color-title);
+}
+
+.ai-basics__flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 46px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.ai-basics__explanation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.ai-basics__explanation:nth-child(3) {
+  grid-column: 1 / 2;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.ai-basics__explanation:nth-child(3),
+.ai-basics__explanation:nth-child(4) {
+  flex-direction: row-reverse;
+}
+
+.ai-basics__explanation:nth-child(1) .ai-basics__content-text {
+  max-width: 275px;
+  padding-right: 42px;
+}
+
+.ai-basics__explanation:nth-child(2) .ai-basics__content-text {
+  max-width: 220px;
+}
+
+.ai-basics__explanation:nth-child(3) .ai-basics__content-text {
+  max-width: 230px;
+  padding-right: 22px;
+}
+
+.ai-basics__explanation:nth-child(4) .ai-basics__content-text {
+  max-width: 210px;
+  padding-right: 10px;
+}
+
+.ai-basics__image {
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.ai-basics__border-bottom {
+  width: 100%;
+  height: 0;
+  filter: blur(2px);
+  box-shadow: var(--border-bottom);
+  border: 1px solid #3dc8c0;
+  opacity: 0.9;
+  margin-top: 129px;
+  margin-bottom: px;
+}
