@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Первый слайдер
   const announcementSwiper = new Swiper(".school-announcement__slider", {
     loop: true,
     slidesPerView: 3.3,
@@ -24,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Второй слайдер
   const jobOpeningsSwiper = new Swiper(".job-openings__slider", {
     loop: true,
     slidesPerView: 3.3,
@@ -48,4 +46,19 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+});
+
+window.addEventListener("pagehide", () => {
+  if (announcementSwiper) {
+    announcementSwiper.destroy(true, true);
+  }
+  if (jobOpeningsSwiper) {
+    jobOpeningsSwiper.destroy(true, true);
+  }
+});
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    console.log("Страница восстановлена из кэша");
+  }
 });

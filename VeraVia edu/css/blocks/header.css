@@ -256,6 +256,7 @@
   z-index: 1;
   top: 666px;
   width: 350px;
+  display: block;
   height: auto;
   object-fit: contain;
   mix-blend-mode: lighten;

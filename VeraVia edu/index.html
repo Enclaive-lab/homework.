@@ -4,14 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VeraVia edu</title>
+    <link
+      rel="preload"
+      as="image"
+      href="./images/right-tentacles.webp"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="./js/school-announcement.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./js/school-announcement.js" defer></script>
   </head>
   <body class="page__body">
     <header class="header">
@@ -107,13 +117,20 @@
             </button>
           </div>
           <div class="header__image-content">
-            <img
-              class="header__main-image"
-              src="./images/right-tentacles.svg"
-              alt="правая часть щупалец которые выглядит как стволовые клетки и также присутствует свечение"
-              width="1211"
-              height="726"
-            />
+            <picture>
+              <source
+                srcset="./images/right-tentacles.webp"
+                type="image/webp"
+              />
+              <img
+                class="header__main-image"
+                src="./images/right-tentacles.svg"
+                alt="правая часть щупалец которые выглядит как стволовые клетки и также присутствует свечение"
+                width="1211"
+                height="726"
+                fetchpriority="high"
+              />
+            </picture>
             <div class="header__image-glow"></div>
             <svg class="header__glare-img--right" width="745" height="729">
               <use href="./icons.svg/glare-right-img.svg#glare"></use>
@@ -398,13 +415,19 @@ society"
                 Записаться на ознакомительный вебинар
               </button>
             </div>
-            <img
-              class="structure__image"
-              src="./images/structure-machinelearning 1.png"
-              width="1201"
-              height="709"
-              alt="машинное обучение (созданный мозг)"
-            />
+            <picture>
+              <source
+                srcset="./images/structure-machinelearning-1.webp"
+                type="image/webp"
+              />
+              <img
+                class="structure__image"
+                src="./images/structure-machinelearning 1.png"
+                width="1201"
+                height="709"
+                alt="машинное обучение (созданный мозг)"
+              />
+            </picture>
             <svg class="structure-glare" width="800" height="552">
               <use href="icons.svg/structure-glare.svg#structure"></use>
             </svg>
@@ -1055,24 +1078,36 @@ society"
               </p>
             </div>
           </div>
-          <img
-            class="author-course__image"
-            src="./images/mashine-learning-cells.svg"
-            width="1084"
-            height="610"
-            alt="машинное обучение клетки"
-          />
+          <picture>
+            <source
+              srcset="./images/mashine-learning-cells.webp"
+              type="image/webp"
+            />
+            <img
+              class="author-course__image"
+              src="./images/mashine-learning-cells.svg"
+              width="1084"
+              height="610"
+              alt="машинное обучение клетки"
+            />
+          </picture>
           <svg width="821" height="538" class="author-course__glare">
             <use href="/icons.svg/author-course-glare.svg#Author"></use>
           </svg>
           <div class="author-course__picture-wrapper">
-            <img
-              class="author-course__picture"
-              src="./images/author-picture.svg"
-              alt="изображение автора"
-              width="441"
-              height="672"
-            />
+            <picture>
+              <source
+                srcset="./images/author-picture-1.webp"
+                type="image/webp"
+              />
+              <img
+                class="author-course__picture"
+                src="./images/author-picture.svg"
+                alt="изображение автора"
+                width="441"
+                height="672"
+              />
+            </picture>
           </div>
           <div class="author-course__info">
             <p class="author-course__name">Владимир Ким</p>
@@ -1886,6 +1921,6 @@ society"
         </div>
       </div>
     </div>
-    <script type="module" src="./js/modal-window.js"></script>
+    <script type="module" src="./js/modal-window.js" defer></script>
   </body>
 </html>

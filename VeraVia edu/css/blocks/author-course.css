@@ -104,7 +104,8 @@
 }
 
 .author-course__border-bottom {
-  width: 100%;
+  width: 1920px;
+  margin-left: 740px;
   height: 0;
   filter: blur(2px);
   box-shadow: var(--border-bottom);
