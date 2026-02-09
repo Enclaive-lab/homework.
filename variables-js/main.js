@@ -18,8 +18,7 @@ for (let i = 1; i <= number; i++) {
 
 console.log(factorial);
 
-
-// задача 3 
+// задача 3
 
 // let board = "";
 
@@ -28,5 +27,3 @@ console.log(factorial);
 //   for (){
 //    row += "Ч ";
 //   }
-
-}
