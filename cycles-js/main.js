@@ -14,12 +14,12 @@ console.log(person);
 
 function isEmpty(object) {
   for (const key in object) {
-    return true;
+    return false;
   }
-  return false;
+  return true;
 }
 console.log(isEmpty({}));
-
+console.log(isEmpty({ a: 1 }));
 // задача 3
 
 const task = {
