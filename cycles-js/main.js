@@ -1,62 +1,65 @@
-// const getFactorial = (num) => {
-//   let factorial = 1;
-//   for (let i = 1; i <= num; i++) {
-//     factorial *= i;
-//   }
-//   return factorial;
-// };
+// задача
 
-// console.log(getFactorial(3));
-// console.log(getFactorial(2));
-// console.log(getFactorial(6));
+const person = {
+  name: "Egor",
+  age: 22,
+  activity: "work",
+  height: 187,
+  weight: 73,
+};
 
-// const factorial = getFactorial(5);
-// const isOdd = (num) => {
-//   return num % 2 !== 0;
-// };
-
-// задача 1
-function calculateFinalPrice(Price, discount, tax) {
-  const priceAfterDiscount = Price - (Price * discount) / 100;
-  const finalPrice = priceAfterDiscount + priceAfterDiscount * tax;
-  return finalPrice;
-}
-
-console.log(calculateFinalPrice(100, 10, 0.2));
-console.log(calculateFinalPrice(100, 10, 0));
+console.log(person);
 
 // задача 2
 
-function checkAccess(username, password) {
-  if (username === "admin" && password === "123456") {
-    return "Доступ разрешен";
+function isEmpty(object) {
+  for (const key in object) {
+    return true;
   }
-  return "Доступ запрещен";
+  return false;
+}
+console.log(isEmpty({}));
+
+// задача 3
+
+const task = {
+  title: "text",
+  description: "stroke",
+  isCompleted: "function",
+};
+
+function cloneAndModify(object, modifications) {
+  const copyrait = { ...object };
+
+  for (const key in modifications) {
+    copyrait[key] = modifications[key];
+  }
+
+  return copyrait;
 }
 
-console.log(checkAccess("admin", "123456"));
+const task2 = cloneAndModify(task, { title: "light" });
 
-// Задача 3
-
-function getTimeOfDay(hour) {
-  if (hour >= 0 && hour <= 5) return "Ночь";
-  if (hour >= 6 && hour <= 11) return "Утро";
-  if (hour >= 12 && hour <= 17) return "День";
-  if (hour >= 18 && hour <= 23) return "Вечер";
-  return "некорректное время";
-}
-console.log(getTimeOfDay(10));
+console.log(task);
+console.log(task2);
 
 // задача 4
 
-function findFirstEven(start, end) {
-  for (let i = start; i <= end; i++) {
-    if (i % 2 === 0) {
-      return i;
-    }
-  }
-  return "Четных чисел нет ";
-}
+const callAllMethods = (object) => {
+  for (const key in object) {
+    const value = object[key];
 
-console.log(findFirstEven(1, 10));
-console.log(findFirstEven(9, 9));
+    if (typeof value === "function") value.call(object);
+  }
+};
+
+const myObject = {
+  method1() {
+    console.log("Метод 1 вызван");
+  },
+  method2() {
+    console.log("Метод 2 вызван");
+  },
+  property: "Это не метод",
+};
+callAllMethods(myObject);
