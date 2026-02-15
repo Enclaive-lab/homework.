@@ -1,65 +1,79 @@
-// задача
+"use strict";
+// задача 1
+const users = [
+  { name: "Alex", age: 24, isAdmin: false },
+  { name: "Bob", age: 13, isAdmin: false },
+  { name: "John", age: 31, isAdmin: true },
+  { name: "Jane", age: 20, isAdmin: false },
+];
 
-const person = {
-  name: "Egor",
-  age: 22,
-  activity: "work",
-  height: 187,
-  weight: 73,
-};
+const lastUsers = [
+  { name: "Ann", age: 19, isAdmin: false },
+  { name: "Jack", age: 43, isAdmin: true },
+];
 
-console.log(person);
+users.push(...lastUsers);
+
+console.log(users);
 
 // задача 2
 
-function isEmpty(object) {
-  for (const key in object) {
-    return false;
-  }
-  return true;
-}
-console.log(isEmpty({}));
-console.log(isEmpty({ a: 1 }));
-// задача 3
+const user = [
+  { name: "Alex", age: 24, isAdmin: false },
+  { name: "Bob", age: 13, isAdmin: false },
+  { name: "John", age: 31, isAdmin: true },
+  { name: "Jane", age: 20, isAdmin: false },
+];
 
-const task = {
-  title: "text",
-  description: "stroke",
-  isCompleted: "function",
+function getUserAverageAge() {
+  let sum = 0;
+  for (let i = 0; i < user.length; i++) {
+    sum += user[i].age;
+  }
+  return sum / user.length;
+}
+console.log(getUserAverageAge(user));
+
+// Задача 3
+const use = [
+  { name: "Alex", age: 24, isAdmin: false },
+  { name: "Bob", age: 13, isAdmin: false },
+  { name: "John", age: 31, isAdmin: true },
+  { name: "Jane", age: 20, isAdmin: false },
+];
+
+const admins = (use) => {
+  const admins = [];
+
+  for (let i = 0; i < use.length; i++) {
+    if (use[i].isAdmin === true) {
+      admins.push(use[i]);
+    }
+  }
+
+  return admins;
 };
 
-function cloneAndModify(object, modifications) {
-  const copyrait = { ...object };
-
-  for (const key in modifications) {
-    copyrait[key] = modifications[key];
-  }
-
-  return copyrait;
-}
-
-const task2 = cloneAndModify(task, { title: "light" });
-
-console.log(task);
-console.log(task2);
+console.log(admins(use));
 
 // задача 4
 
-const callAllMethods = (object) => {
-  for (const key in object) {
-    const value = object[key];
-
-    if (typeof value === "function") value.call(object);
+function first(arr, n) {
+  if (n === undefined) {
+    return [arr[0]];
   }
-};
 
-const myObject = {
-  method1() {
-    console.log("Метод 1 вызван");
-  },
-  method2() {
-    console.log("Метод 2 вызван");
-  },
-  property: "Это не метод",
-};
-callAllMethods(myObject);
+  if (n === 0) {
+    return [];
+  }
+
+  const result = [];
+  for (let i = 0; i < n; i++) {
+    result.push(arr[i]);
+  }
+  return result;
+}
+
+console.log(first([1, 2, 3, 4, 5], 3));
+console.log(first([1, 2, 3, 4, 5]));
+console.log(first([1, 2, 3, 4, 5], 0));
