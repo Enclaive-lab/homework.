@@ -1,5 +1,28 @@
 "use strict";
 
+const form = document.querySelector(".form");
+const input = document.querySelector(".input");
+const todosElement = document.querySelector(".todos");
+
+const createTodoElement = (text) => {
+  const li = document.createElement("li");
+  li.innerHTML = `
+          <div>${text}</div>
+          <div>
+            <button >✔</button>
+            <button >✖</button>
+          </div>`;
+  todosElement.appendChild(li);
+};
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const text = input.value;
+  if (!text) return;
+  createTodoElement(text);
+  input.value = "";
+});
+
 const todoKeys = {
   id: "id",
   text: "text",
@@ -11,7 +34,7 @@ const todos = [];
 const errTodoNotFound = (todoId) => `Todo with id ${todoId} not found`;
 
 const getNewTodoId = (todos) =>
-  todos.reduce((maxId, todo) => Math.max(maxId, todo.id), 0) + 1;
+  todos.reduce((maxId, todo) => Math.max(maxId, todo[todoKeys.id]), 0) + 1;
 
 const createTodo = (todos, text) => {
   const newTodo = {
@@ -25,6 +48,7 @@ const createTodo = (todos, text) => {
 
 const completeTodoById = (todos, todoId) => {
   const todo = todos.find((todo) => todo[todoKeys.id] === todoId);
+
   if (!todo) {
     console.error(errTodoNotFound(todoId));
     return null;
