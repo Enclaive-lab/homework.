@@ -1,28 +1,5 @@
 "use strict";
 
-const form = document.querySelector(".form");
-const input = document.querySelector(".input");
-const todosElement = document.querySelector(".todos");
-
-const createTodoElement = (text) => {
-  const li = document.createElement("li");
-  li.innerHTML = `
-          <div>${text}</div>
-          <div>
-            <button >✔</button>
-            <button >✖</button>
-          </div>`;
-  todosElement.appendChild(li);
-};
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const text = input.value;
-  if (!text) return;
-  createTodoElement(text);
-  input.value = "";
-});
-
 const todoKeys = {
   id: "id",
   text: "text",
@@ -66,3 +43,51 @@ const deleteTodoById = (todos, todoId) => {
   todos.splice(todoIndex, 1);
   return todos;
 };
+
+const form = document.querySelector(".form");
+const input = document.querySelector(".input");
+const todosElement = document.querySelector(".todos");
+
+const createTodoElement = (todo) => {
+  const li = document.createElement("li");
+  li.classList.add("todo");
+  li.dataset.id = todo[todoKeys.id];
+  li.innerHTML = `
+           <div class="todo-text">${todo[todoKeys.text]}</div>
+          <div class="todo-actions">
+            <button class="button-complete button">&#10004</button>
+            <button class="button-delete button">&#10006</button>
+          </div>`;
+  return li;
+};
+
+const handleCreateTodo = (todos, text) => {
+  const todo = createTodo(todos, text);
+  const todoElement = createTodoElement(todo);
+  todosElement.prepend(todoElement);
+};
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const text = input.value.trim();
+  if (!text) return;
+
+  handleCreateTodo(todos, text);
+  input.value = "";
+});
+
+todosElement.addEventListener("click", ({ target }) => {
+  const todo = target.closest(".todo");
+  if (!todo) return;
+
+  const todoId = Number(todo.dataset.id);
+
+  if (target.matches(".button-complete")) {
+    completeTodoById(todos, todoId);
+    todo.classList.toggle("completed");
+  }
+  if (target.matches(".button-delete")) {
+    deleteTodoById(todos, todoId);
+    todo.remove();
+  }
+});
