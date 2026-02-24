@@ -1,0 +1,20 @@
+.toast-added {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: gray;
+  color: var(--main-color);
+  border-radius: 6px;
+  padding: 5px;
+  transition: var(--transition-time);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.toast--visible {
+  opacity: 1;
+  visibility: visible;
+  bottom: 30px;
+}
